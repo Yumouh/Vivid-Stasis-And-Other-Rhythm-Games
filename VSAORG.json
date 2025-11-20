@@ -1,0 +1,18 @@
+{
+  "id": "VSAORG",
+  "name": "Vivid/Stasis and other rhythm games",
+  "author": [
+    "Yumouk","Fyato"
+  ],
+  "description": "Adds 30 vanilla-style Jokers based on vivid/stasis and many MUG songs",
+  "prefix": "vsvsvsvs",
+  "main_file": "main.lua",
+  "version": "1.0.0",
+  "priority": 8266,
+  "badge_colour": "a10bb3",
+  "badge_text_colour": "FFFFFF",
+  "display_name": "VSAORG",
+  "dependencies": [
+    "Steamodded (>=1.0.0~BETA-0827c)"
+  ]
+}
