@@ -11,7 +11,7 @@ SMODS.Joker{ --R.I.P.
     loc_txt = {
         ['name'] = 'R.I.P.',
         ['text'] = {
-            [1] = 'When the {C:attention}Joker{} to its right',
+            [1] = 'When the {C:attention}Joker{} to its',
             [2] = 'right is sold, {C:attention}return{} it',
             [3] = '{C:red}self destructs{}'
         },
