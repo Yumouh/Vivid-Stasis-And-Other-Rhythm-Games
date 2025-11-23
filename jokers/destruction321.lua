@@ -43,14 +43,14 @@ SMODS.Joker{ --DESTRUCTION 3,2,1
             -- 摧毁所有手牌
             for i = #G.hand.cards, 1, -1 do
                 local hand_card = G.hand.cards[i]
-                hand_card:start_dissolve(nil, true)
+                SMODS.destroy_cards({ hand_card })
             end
             
             -- 自毁
             return {
                 extra = {
                     func = function()
-                        card:dissove()
+                        card:start_dissolve()
                         return true
                     end,
                     message = "Total destruction!",
