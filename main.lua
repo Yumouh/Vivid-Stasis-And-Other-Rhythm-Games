@@ -24,39 +24,11 @@ SMODS.Atlas({
     atlas_table = "ASSET_ATLAS"
 })
 
-SMODS.current_mod.description_loc_vars = function()
-    return {background_colour = G.C.CLEAR, text_colour = G.C.WHITE, scale = 1.2, shadow = true}
-end
-
-SMODS.current_mod.custom_ui = function(nodes)
-    local _, description = unpack(nodes)
-    local wiki_deepfind = SMODS.deepfind(description, "https://balatromods.miraheze.org/wiki/Brook", true)[1]
-    if wiki_deepfind then
-        local wiki_link_table = wiki_deepfind.objtree[#wiki_deepfind.objtree-2]
-        wiki_link_table.config.button = "open_brook_wiki"
-        wiki_link_table.config.tooltip = {text = {localize("b_open_brook_wiki")}}
-    end
-    local wiki_deepfindvs = SMODS.deepfind(description, "https://balatromods.miraheze.org/wiki/VividStasisAndOtherRhythmGames", true)[1]
-    if wiki_deepfindvs then
-        local wiki_link_table = wiki_deepfindvs.objtree[#wiki_deepfindvs.objtree-2]
-        wiki_link_table.config.button = "open_vsaorg_wiki"
-        wiki_link_table.config.tooltip = {text = {localize("b_open_vsaorg_wiki")}}
-    end
-end
-
-G.FUNCS.open_brook_wiki = function(e)
-    love.system.openURL("https://balatromods.miraheze.org/wiki/Brook")
-end
-
-G.FUNCS.open_vsaorg_wiki = function(e)
-    love.system.openURL("https://balatromods.miraheze.org/wiki/VividStasisAndOtherRhythmGames")
-end
-
 local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
 
-local jokerIndexList = {27,25,3,8,22,13,10,29,15,24,30,12,28,20,4,11,1,14,26,7,19,18,5,16,6,17,2,21,23,9}
+local jokerIndexList = {33,31,3,8,28,16,12,35,19,30,36,14,34,26,4,13,1,17,32,7,25,24,5,21,6,22,2,27,29,11,9,10,18,15,20,23}
 
 local function load_jokers_folder()
     local mod_path = SMODS.current_mod.path
@@ -95,15 +67,21 @@ SMODS.ObjectType({
         ["j_vsvsvsvs_apollo"] = true,
         ["j_vsvsvsvs_bbkkbkk"] = true,
         ["j_vsvsvsvs_chaos"] = true,
+        ["j_vsvsvsvs_chronomia"] = true,
+        ["j_vsvsvsvs_crystallized"] = true,
         ["j_vsvsvsvs_cutter"] = true,
         ["j_vsvsvsvs_dawn"] = true,
         ["j_vsvsvsvs_destruction321"] = true,
         ["j_vsvsvsvs_eri"] = true,
+        ["j_vsvsvsvs_essence"] = true,
         ["j_vsvsvsvs_firstsnow"] = true,
         ["j_vsvsvsvs_freedomdive"] = true,
+        ["j_vsvsvsvs_goodlife"] = true,
         ["j_vsvsvsvs_kotomi"] = true,
+        ["j_vsvsvsvs_lapis"] = true,
         ["j_vsvsvsvs_mobius"] = true,
         ["j_vsvsvsvs_mvurbd"] = true,
+        ["j_vsvsvsvs_newyorkbackraise"] = true,
         ["j_vsvsvsvs_rainshower"] = true,
         ["j_vsvsvsvs_rgb"] = true,
         ["j_vsvsvsvs_rip"] = true,
@@ -139,3 +117,10 @@ SMODS.ObjectType({
         ["j_vsvsvsvs_stargazers"] = true
     },
 })
+
+
+SMODS.current_mod.optional_features = function()
+    return {
+        cardareas = {} 
+    }
+end

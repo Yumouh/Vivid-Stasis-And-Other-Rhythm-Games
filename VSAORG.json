@@ -2,9 +2,10 @@
   "id": "VSAORG",
   "name": "Vivid/Stasis and other rhythm games",
   "author": [
-    "Yumouk","Fyato"
+    "Yumouk",
+    "Fyato"
   ],
-  "description": "Adds 30 vanilla-style Jokers based on vivid/stasis and many MUG songs",
+  "description": "Vivid/Stasis And Other Rhythm Games is a mod that adds 45 Jokers based on Music/Characters from several Rhythm games.",
   "prefix": "vsvsvsvs",
   "main_file": "main.lua",
   "version": "1.0.0",
